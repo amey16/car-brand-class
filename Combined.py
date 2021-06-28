@@ -24,6 +24,8 @@ def main():
 def download_images(data,n_images,saved_folder):
     print('searching...')
 
+    data = data.split(' ')
+    data = '+'.join(data)
     search_url = google_image + 'q=' + data
 
     response = requests.get(search_url, headers=user_agent)
